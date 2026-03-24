@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshit Mehta | Freelance Photographer</title>
+    <style>
+        /* Base Styles & Typography */
+        :root {
+            --bg-color: #0f0f0f;
+            --text-main: #f5f5f5;
+            --text-muted: #a3a3a3;
+            --accent: #ffffff;
+            --section-padding: 100px 20px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3 {
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            color: var(--text-muted);
+            max-width: 600px;
+        }
+
+        /* About Section */
+        .about {
+            padding: var(--section-padding);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: var(--section-padding);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            width: 100%;
+            aspect-ratio: 4/5;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            border-radius: 4px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: var(--section-padding);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            color: var(--text-main);
+            font-family: inherit;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--text-muted);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: var(--text-main);
+            color: var(--bg-color);
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            align-self: center;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            :root {
+                --section-padding: 60px 20px;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Harshit Mehta</h1>
+        <p>Capturing stylized moments and compelling narratives through the lens.</p>
+    </section>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Harshit. I am a freelance photographer based in Gujarat, specializing in stylized portraits and creative visual storytelling. My approach blends technical precision with a deep appreciation for mood, light, and authentic expression.</p>
+        <p>Whether I'm shooting commercial projects, intimate portraits, or exploring digital art integration, my goal is always to create imagery that speaks quietly but leaves a lasting impact.</p>
+    </section>
+
+    <section class="gallery-section">
+        <h2>Selected Works</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&h=750&fit=crop" alt="Portfolio Image 1"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&h=750&fit=crop" alt="Portfolio Image 2"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&h=750&fit=crop" alt="Portfolio Image 3"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=750&fit=crop" alt="Portfolio Image 4"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1554080353-a576cf803bda?w=600&h=750&fit=crop" alt="Portfolio Image 5"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=750&fit=crop" alt="Portfolio Image 6"></div>
+        </div>
+    </section>
+
+   <section class="contact">
+        <h2>Get in Touch / Book a Shoot</h2>
+    <form action="https://formspree.io/f/xvzwjyga" method="POST">
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Harshit Mehta. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
